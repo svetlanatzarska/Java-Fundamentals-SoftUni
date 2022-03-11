@@ -12,7 +12,6 @@ public class Train {
         String input = scanner.nextLine();
 
 
-
         while (!input.equals("end")) {
             String[] splitInput = input.split("\\s+");
             String data = splitInput[0];
@@ -22,11 +21,10 @@ public class Train {
                 int newPassengers = Integer.parseInt(splitInput[0]);
                 int index = 0;
                 for (Integer wagon : wagons) {
-                    int passengers= wagon+newPassengers;
+                    int passengers = wagon + newPassengers;
                     int result = wagonMaxCapacity - passengers;
-                    if ( result >= 0){
-                        wagons.set(index,passengers);
-
+                    if (result >= 0) {
+                        wagons.set(index, passengers);
                         break;
                     }
                     index++;
@@ -41,7 +39,7 @@ public class Train {
 
     }
 
-    private static List<Integer> getLineAsNumber(Scanner scanner){
+    private static List<Integer> getLineAsNumber(Scanner scanner) {
         String[] line = scanner.nextLine().split("\\s+");
         List<Integer> newListArray = new ArrayList<>();
         for (String s : line) {
