@@ -12,9 +12,9 @@ public class WordFilter {
                .filter(w -> w.length() % 2 == 0)
                .toArray(String[]::new);
 
-       for (String s : lineOfWords) {
-            System.out.println(s);
-        }
+
+        Arrays.stream(lineOfWords)
+                .forEach(System.out::println);
 
     }
 }
